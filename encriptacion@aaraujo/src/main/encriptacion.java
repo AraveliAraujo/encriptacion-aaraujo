@@ -26,8 +26,8 @@ public class encriptacion {
     //convertir los caracteres chinos a Número o ascii (para la desencriptación)
     private String rarosToNumber(String numDelTexto) {
         String numeroDelTexto = ""; //
-        for (int i = 0; i < numDelTexto.length(); i++) {
-            numeroDelTexto = numeroDelTexto + dcba_araujo(numDelTexto.charAt(i)); //
+        for (int i = 0; i < numDelTexto.length(); i++) { // sacar el ascii del texto
+            numeroDelTexto = numeroDelTexto + dcba_araujo(numDelTexto.charAt(i)); // el ChatAt(i) me permite convertir de texto a número
         }
         return numeroDelTexto;
 
