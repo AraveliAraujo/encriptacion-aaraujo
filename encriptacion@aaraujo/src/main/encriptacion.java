@@ -37,7 +37,7 @@ public class encriptacion {
     public String abcdescencriptar(String contraUserIs) {
         String psswVisible = "";
         contraUserIs = rarosToNumber(contraUserIs);
-        for (String numero : contraUserIs.split(":")) {
+        for (String numero : contraUserIs.split(":")) { //dividir por el separador :
             psswVisible = psswVisible + ((char) (Integer.valueOf(numero) + 1));
         }
         return psswVisible;
@@ -47,7 +47,7 @@ public class encriptacion {
     private String psswToAscii(String password) {
         String msgPrimerCifrado = "";
         for (int i = 0; i < password.length(); i++) {
-            msgPrimerCifrado = msgPrimerCifrado + ((int) password.charAt(i) - 1) + ":";
+            msgPrimerCifrado = msgPrimerCifrado + ((int) password.charAt(i) - 1) + ":"; //separador :
         }
         msgPrimerCifrado = msgPrimerCifrado.substring(0, msgPrimerCifrado.length() - 1); //quitando el último separador
 
