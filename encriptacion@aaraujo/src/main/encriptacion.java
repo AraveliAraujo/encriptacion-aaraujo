@@ -33,7 +33,7 @@ public class encriptacion {
 
     }
 
-    //Encriptar de ascii(npumeros) a letras (desencriptación)
+    //Encriptar de ascii(números) a letras (desencriptación)
     public String abcdescencriptar(String contraUserIs) {
         String psswVisible = "";
         contraUserIs = rarosToNumber(contraUserIs);
