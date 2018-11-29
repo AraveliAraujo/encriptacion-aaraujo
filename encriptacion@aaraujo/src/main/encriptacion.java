@@ -4,12 +4,12 @@ public class encriptacion {
 
     //Método para encriptar y ejecutar desde la clase main(Encriptación)
     public String encriptacion(String password) {
-        String msgEncriptado = "";
-        password = psswToAscii(password);
-        for (int i = 0; i < password.length(); i++) {
-            msgEncriptado = msgEncriptado + abcd_araujo(password.charAt(i));
+        String msgEncriptado = ""; //declaramos la variable que contiene el mensaje a encriptar como resultado final
+        password = psswToAscii(password); // a la veriable parámetro lo enviamos al ascii
+        for (int i = 0; i < password.length(); i++) { // a la palabra enviada la convertimos letra por letra con el length
+            msgEncriptado = msgEncriptado + abcd_araujo(password.charAt(i)); // msgEncriptado lo concatenamos con el diccionario definido
         }
-        return msgEncriptado;
+        return msgEncriptado; // me retorna el mensaje encriptado
     }
 
     //Método para encriptar sin opción a desencriptar
@@ -25,9 +25,9 @@ public class encriptacion {
 
     //convertir los caracteres chinos a Número o ascii (para la desencriptación)
     private String rarosToNumber(String numDelTexto) {
-        String numeroDelTexto = "";
+        String numeroDelTexto = ""; //
         for (int i = 0; i < numDelTexto.length(); i++) {
-            numeroDelTexto = numeroDelTexto + dcba_araujo(numDelTexto.charAt(i));
+            numeroDelTexto = numeroDelTexto + dcba_araujo(numDelTexto.charAt(i)); //
         }
         return numeroDelTexto;
 
@@ -49,7 +49,7 @@ public class encriptacion {
         for (int i = 0; i < password.length(); i++) {
             msgPrimerCifrado = msgPrimerCifrado + ((int) password.charAt(i) - 1) + ":";
         }
-        msgPrimerCifrado = msgPrimerCifrado.substring(0, msgPrimerCifrado.length() - 1);
+        msgPrimerCifrado = msgPrimerCifrado.substring(0, msgPrimerCifrado.length() - 1); //quitando el último separador
 
         return msgPrimerCifrado;
     }
