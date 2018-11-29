@@ -45,12 +45,11 @@ public class encriptacion {
 
     //convertir lo que ingresé a ascii
     private String psswToAscii(String password) {
-        String msgPrimerCifrado = "";
-        for (int i = 0; i < password.length(); i++) {
-            msgPrimerCifrado = msgPrimerCifrado + ((int) password.charAt(i) - 1) + ":"; //separador :
+        String msgPrimerCifrado = ""; //declaramos mensaje primer cifrado
+        for (int i = 0; i < password.length(); i++) { // lo vamos cifrando segun la cantidad de caracteres
+            msgPrimerCifrado = msgPrimerCifrado + ((int) password.charAt(i) - 1) + ":"; //convertir a ascii + separador : y lo guardamos en msgPrimer Cifrado
         }
         msgPrimerCifrado = msgPrimerCifrado.substring(0, msgPrimerCifrado.length() - 1); //quitando el último separador
-
         return msgPrimerCifrado;
     }
 
