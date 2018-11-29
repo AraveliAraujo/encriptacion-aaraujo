@@ -12,6 +12,7 @@ public class encriptacion {
         return msgEncriptado;
     }
 
+    //Método para encriptar sin opción a desencriptar
     public String encriptacionLoca(String password) {
         String psswEncriptadoFinal = "";
         password = encriptacion(password);
@@ -22,6 +23,7 @@ public class encriptacion {
         return psswEncriptadoFinal;
     }
 
+    //convertir los caracteres chinos a Número o ascii (para la desencriptación)
     private String rarosToNumber(String numDelTexto) {
         String numeroDelTexto = "";
         for (int i = 0; i < numDelTexto.length(); i++) {
@@ -31,6 +33,7 @@ public class encriptacion {
 
     }
 
+    //Encriptar de ascii(npumeros) a letras (desencriptación)
     public String abcdescencriptar(String contraUserIs) {
         String psswVisible = "";
         contraUserIs = rarosToNumber(contraUserIs);
@@ -40,6 +43,7 @@ public class encriptacion {
         return psswVisible;
     }
 
+    //convertir lo que ingresé a ascii
     private String psswToAscii(String password) {
         String msgPrimerCifrado = "";
         for (int i = 0; i < password.length(); i++) {
@@ -50,6 +54,7 @@ public class encriptacion {
         return msgPrimerCifrado;
     }
 
+    //diccionarios
     private String abcd_araujo(char abcd) {
         switch (abcd) {
             case '0':
@@ -82,6 +87,7 @@ public class encriptacion {
 
     }
 
+//    Diccionario para desencriptar
     private String dcba_araujo(char abcd) {
         switch (abcd) {
             case '㊜':
@@ -114,6 +120,7 @@ public class encriptacion {
 
     }
 
+//    Sin desencrptar
     private String burla_araujo(char abcd) {
         switch (abcd) {
             case '㊜':
